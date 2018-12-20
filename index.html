@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="css/prism.css">
+        <link rel="stylesheet" href="css/bulma.css">
+        <link rel="stylesheet" href="css/ionicons.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <div class="left-bar has-shadow">
+            <div class="nav-left-center">
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <form class="field" method="get" action="/search">
+                            <input class="input is-rounded" type="text" placeholder="Search">
+                        </form>
+                    </div>
+                </div>
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        About
+                    </a>
+
+                    <a class="navbar-item">
+                        Documentation
+                    </a>
+                    <a class="navbar-item">
+                        News
+                    </a>
+                    <a class="navbar-item">
+                        Team
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="images/codefii.png" width="" height="28">
+                </a>
+                <a class="btn-2"></a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <form class="field" method="get" action="/search">
+                            <input class="input is-rounded" type="text" placeholder="Search">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        About
+                    </a>
+
+                    <a  href="documentation.html"class="navbar-item">
+                        Documentation
+                    </a>
+                    <a class="navbar-item">
+                        News
+                    </a>
+                    <a class="navbar-item">
+                        Team
+                    </a>
+                </div>
+        </nav>
+
+        <!-- center -->
+        <div class="is-clearfix"></div>
+        <div class="container">
+            <div class="columns is-centered bring-down ">
+
+                <div class="column is-6 has-text-centered">
+                    <h1 class="title is-3">The superfast PHP framework.</h1>
+                    <a class="button is-primary is-rounded">
+                        <p>
+                            GET STARTED
+                        </p>
+                    </a>
+                    <!-- <a class="button is-primary is-rounded">
+                        <p>
+                            GET STARTED
+                        </p>
+                    </a> -->
+
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-5">
+                    <pre class="line-numbers" data-start="">
+    <code class="language-php">
+    $router = \Codefii\Router\Router();
+    $router->setNamespace("app\controllers");
+    $router->get('/',function(){
+        echo "Prince Darlington";
+    })
+  </code>
+</pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="codefii_info">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-4 has-text-centered">
+                        <img src="./images/performance.png" class="stable-img">
+                        <h3 class="title is-3">Performance</h3>
+                        <p>Non-blocking, event-driven architecture built on top of Apple's SwiftNIO delivers high performance.
+</p>
+                    </div>
+                    <div class="column is-4 has-text-centered">
+                        <img src="./images/phplogo.svg" class="stable-img">
+                        <h3 class="title is-3">Popularity</h3>
+                        <p>Written in PHP, the world most popular and widely used server side scripting language
+                        </p>
+                    </div>
+                    <div class="column is-4 has-text-centered">
+                        <img src="./images/admin.svg" class="stable-img">
+                        <h3 class="title is-3">Syrah Admin</h3>
+                        <p>Syrah is a collection of packages which allows you to manage models quickly. 
+                            It provides a set of
+                        useful packages  that will make the process of creating a highly customizable admin panel
+                        easier
+                        </p>
+                    </div>
+                </div>
+                <!-- packages -->
+                <div class="columns is-centered">
+                    <div class="column is-3 has-text-centered">
+                        <h3 class="title is-3">Packages</h3>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                      
+                    <div class="column is-3 has-text-centered">
+                        
+                        <li class="package-list">
+                            <h3 class="title is-4">Http Middleware</h3>
+                        </li>
+                        <li class="package-list">
+                            <h3 class="title is-4">Syrah Admin</h3>
+                        </li>
+                    </div>
+                        <div class="column is-3 has-text-centered">
+                        <li class="package-list">
+                            <h3 class="title is-4">Silp</h3>
+                        </li>
+                        <li class="package-list">
+                            <h3 class="title is-4">Auth</h3>
+                        </li>
+                    </div>
+                    <div class="column is-3 has-text-centered">
+                        <li class="package-list">
+                            <h3 class="title is-4">Mysql</h3>
+                        </li>
+                        <li class="package-list">
+                            <h3 class="title is-4">PostgreSql</h3>
+                        </li>
+                    </div>
+                   
+                </div>
+                
+                    
+                <!-- end packages -->
+            </div>
+        </div>
+
+
+<!-- contaibute-->
+
+<div class="contribution">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-2 has-text-centered">
+                <h3 class='title is-3'>Contribute</h3>
+            </div>
+        </div>
+
+        <!-- contribution-->
+            <div class="columns is-centered">
+                <div class="column is-3 has-text-centered">
+                    <img src="./images/github.png" class="stable-img">
+                    <p>
+                        Submit feature ideas, report bugs, and merge code on GitHub!
+                    </p>
+                   <p>
+                        <a href="https://github.com/codefii/codefii" class="button is-primary is-rounded">GITHUB</a>
+                   </p>
+                </div>
+                <div class="column is-4 has-text-centered">
+                    <img src="./images/twitter.png" class="stable-img">
+                    <p>
+                        Connect with other 
+                    </p>
+                    <p>
+                        <a href="https://github.com/codefii/codefii" class="button is-primary is-rounded">GITHUB</a>
+                    </p>
+                </div>
+            </div>
+        <!-- end contribution-->
+    </div>
+</div>
+        <!-- end center-->
+
+
+
+        <!-- footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <!-- <div class="columns">
+              
+                <div class="column is-3">
+                    
+    
+                </div>
+              
+              
+    
+            </div>
+        </div> -->
+       
+        <div class="container">
+            <div class="content">
+                <div class="columns is-centered">
+                    <div class="column is-6 has-text-centered">
+                        <h6 class="title is-7">© 2018 Bittrill</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- end footer-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="css/prism.js"></script>
+        <script>
+            $(document).ready(() => {
+                $('.burger').on('click', function () {
+                    $('.left-bar').toggleClass('side')
+                    $(".navbar-burger").toggleClass(".btn-2")
+                });
+                $(".btn-2").click(function () {
+
+                });
+
+            })
+        </script>
+    </body>
+
+</html>
