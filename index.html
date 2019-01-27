@@ -1,269 +1,225 @@
-<!DOCTYPE html>
-<html>
+<head>
+    <title>Codefii (Server-side Swift)</title>
+    <meta name="description" content="Codefii is a popular web framework written in Swift. It provides a beautifully expressive and easy to use foundation for your next website, API, or cloud project.">
+    <meta name="keywords" content="server side swift, Codefiiswift, swiftlang">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/codefii.png" sizes="32x32">
+    <link rel="stylesheet" href="/css/index_style.css">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+       }
+      html, body {
+         min-width: 100%;
+         min-height: 100%;
+          margin: 0;
+         }
+    </style>
 
-    <head>
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link rel="stylesheet" href="css/prism.css">
-        <link rel="stylesheet" href="css/bulma.css">
-        <link rel="stylesheet" href="css/ionicons.css">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
+</head>
 
-    <body>
-        <div class="left-bar has-shadow">
-            <div class="nav-left-center">
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <form class="field" method="get" action="/search">
-                            <input class="input is-rounded" type="text" placeholder="Search">
-                        </form>
-                    </div>
-                </div>
-                <div class="navbar-start">
-                    <a class="navbar-item">
-                        About
-                    </a>
-
-                    <a class="navbar-item">
-                        Documentation
-                    </a>
-                    <a class="navbar-item">
-                        News
-                    </a>
-                    <a class="navbar-item">
-                        Team
-                    </a>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="images/codefii.png" width="" height="28">
-                </a>
-                <a class="btn-2"></a>
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-
-            </div>
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <form class="field" method="get" action="/search">
-                            <input class="input is-rounded" type="text" placeholder="Search">
-                        </form>
-                    </div>
-                </div>
-
-                <div class="navbar-start">
-                    <a class="navbar-item">
-                        About
-                    </a>
-
-                    <a  href="documentation.html"class="navbar-item">
-                        Documentation
-                    </a>
-                    <a class="navbar-item">
-                        News
-                    </a>
-                    <a class="navbar-item">
-                        Team
-                    </a>
-                </div>
+<body>
+    <div class="Codefii-app">
+       <!--Navigation bar-->
+        <nav class="Codefii-nav Codefii-app__nav">
+          <ul class="Codefii-nav__list">
+            <li class="Codefii-nav__list-item code">
+              <a href="/" class="Codefii-nav__link active">Code</a>
+            </li>
+            <li class="Codefii-nav__list-item cloud">
+              <a href="https://Codefii.cloud" class="Codefii-nav__link">Cloud</a>
+            </li>
+            <li class="Codefii-nav__list-item docs">
+              <a href="https://docs.Codefii.com" class="Codefii-nav__link">Docs</a>
+            </li>
+            <li class="Codefii-nav__list-item github">
+              <a href="https://github.com/Codefii/Codefii" class="Codefii-nav__link">GitHub</a>
+            </li>
+          </ul>
         </nav>
+         <!--Navigation ends-->
 
-        <!-- center -->
-        <div class="is-clearfix"></div>
-        <div class="container">
-            <div class="columns is-centered bring-down ">
+        <header class="Codefii-header Codefii-app__header">
+          <h1 class="Codefii-header__slogan">The future of web development.</h1>
+          <div class="Codefii-call-to-action Codefii-header__call-to-action">
+            <a href="https://docs.Codefii.com/3.0/install/macos/" target="_blank" class="Codefii-call-to-action__button start">Get Started</a>
+            <a href="https://discord.gg/Codefii" target="_blank" class="Codefii-call-to-action__button community">Join Chat</a>
+          </div>
+        </header>
 
-                <div class="column is-6 has-text-centered">
-                    <h1 class="title is-3">The superfast PHP framework.</h1>
-                    <a class="button is-primary is-rounded">
-                        <p>
-                            GET STARTED
-                        </p>
-                    </a>
-                    <!-- <a class="button is-primary is-rounded">
-                        <p>
-                            GET STARTED
-                        </p>
-                    </a> -->
-
-                </div>
+         <!--center page-->
+        <main class="Codefii-app__content">
+          <section class="Codefii-terminal Codefii-app__terminal">
+            <div class="Codefii-terminal__stoplight-container">
+              <div class="Codefii-terminal__stoplight red">
+              </div>
+              <div class="Codefii-terminal__stoplight yellow">
+              </div>
+              <div class="Codefii-terminal__stoplight green">
+              </div>
             </div>
-            <div class="columns is-centered">
-                <div class="column is-5">
-                    <pre class="line-numbers" data-start="">
-    <code class="language-php">
-    $router = \Codefii\Router\Router();
-    $router->setNamespace("app\controllers");
-    $router->get('/',function(){
-        echo "Prince Darlington";
-    })
-  </code>
-</pre>
-                </div>
-            </div>
-        </div>
+            <pre class="Codefii-terminal__sample-code">
+
+              <span class="keyword">import</span> Vapor
+
+              <span class="keyword">let</span> app = <span class="keyword">try</span> <span class="type">Application</span>()
+              <span class="keyword">let</span> router = <span class="keyword">try</span> app.<span class="method">make</span>(<span class="type">Router</span>.<span class="keyword">self</span>)
+
+              router.<span class="method">get</span>(<span class="string">"hello"</span>) { req <span class="keyword">in</span>
+                  <span class="keyword">return</span> <span class="string">"Hello, world."</span>
+              }
+
+              <span class="keyword">try</span> app.<span class="method">run</span>()
+
+            </pre>
+          </section>
+
+            <!--brief descrption area(first column)-->
+          <section class="Codefii-bio Codefii-app__bio">
+            <article class="Codefii-card Codefii-bio__blurb light">
+              <img src="./images/codefii_image_4.svg" class="Codefii-card__image">
+               <p class="Codefii-card__blurb-text">Non-blocking, event-driven architecture built on top of Apple's <a target="_blank" href="https://github.com/apple/swift-nio">SwiftNIO</a> delivers <a target="_blank" href="https://medium.com/@codeCodefii/Codefii-3-0-0-released-8356fa619a5d">high performance</a>.</p>
+             </article>
+             <!--brief descrption area(second column)-->
+             <article class="Codefii-card Codefii-bio__blurb light">
+               <img src="./images/codefii_image_3.svg" class="Codefii-card__image">
+               <p class="Codefii-card__blurb-text">Written in <a target="_blank" href="https://swift.org">Swift</a>, the powerful programming language that is also easy to learn.</p>
+             </article>
+             <!--brief descrption area(third column)-->
+             <article class="Codefii-card Codefii-bio__blurb light">
+               <img src="./images/codefii_image_2.svg" class="Codefii-card__image">
+               <p class="Codefii-card__blurb-text">Expressive, <a target="_blank" href="https://developer.apple.com/videos/play/wwdc2015/408/">protocol-oriented design</a> with a focus on type-safety and maintainability.</p>
+             </article>
+           </section>
+
+           <!--Packages section-->
+           <section class="Codefii-packages Codefii-app__packages">
+             <h3 class="Codefii-packages__title">Packages</h3>
+             <div class="Codefii-packages__container">
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/http" target="_blank" class="Codefii-packages__repo-link">HTTP</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/websocket" target="_blank" class="Codefii-packages__repo-link">WebSocket</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/crypto" target="_blank" class="Codefii-packages__repo-link">Crypto</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/redis" target="_blank" class="Codefii-packages__repo-link">Redis</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/mysql" target="_blank" class="Codefii-packages__repo-link">MySQL</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/postgresql" target="_blank" class="Codefii-packages__repo-link">PostgreSQL</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/sqlite" target="_blank" class="Codefii-packages__repo-link">SQLite</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/fluent" target="_blank" class="Codefii-packages__repo-link">Fluent</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/jwt" target="_blank" class="Codefii-packages__repo-link">JWT</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/leaf" target="_blank" class="Codefii-packages__repo-link">Leaf</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/service" target="_blank" class="Codefii-packages__repo-link">Service</a>
+               </div>
+               <div class="Codefii-packages__column-container">
+                 <a href="https://github.com/Codefii/auth" target="_blank" class="Codefii-packages__repo-link">Auth</a>
+               </div>
+             </div>
+           </section>
+           <!--package section ends-->
+
+           <!--call to action-->
+           <div class="Codefii-call-to-action Codefii-app__call-to-action">
+             <a href="https://docs.Codefii.com/3.0/install/macos/" target="_blank" class="Codefii-call-to-action__button start">Get Started</a><a href="https://discord.gg/Codefii" target="_blank" class="Codefii-call-to-action__button community">Join Chat</a>
+           </div>
+           <!--call to action ends-->
+
+           <!--contribute section-->
+            <section class="Codefii-contribute Codefii-app__contribute">
+              <h3 class="Codefii-contribute__title">Contribute!</h3>
+              <div class="Codefii-contribute__opportunity-container">
+                <article class="Codefii-card Codefii-contribute__opportunity dark">
+                  <img src="./images/codefii_image_6.png" class="Codefii-card__image">
+                  <p class="Codefii-card__blurb-text">Submit feature ideas, report bugs, and merge code on GitHub!</p> <a href="https://github.com/Codefii/Codefii" target="_blank" class="Codefii-card__button">GitHub</a>
+                </article>
+                <article class="Codefii-card Codefii-contribute__opportunity dark">
+                  <img src="./images/codefii_image_7.png" class="Codefii-card__image">
+                  <p class="Codefii-card__blurb-text">Help newcomers learn the ropes and get started with Codefii.</p> <a href="https://discord.gg/BnXmVGA" target="_blank" class="Codefii-card__button">Join Chat</a>
+                </article>
+                <article class="Codefii-card Codefii-contribute__opportunity dark">
+                  <img src="./images/codefii_image_8.png" class="Codefii-card__image">
+                  <p class="Codefii-card__blurb-text">Make a one time or recurring donation to support development.</p>
+                  <a href="https://opencollective.com/Codefii#sponsor" target="_blank" class="Codefii-card__button">Become Backer</a>
+                </article>
+              </div>
+            </section>
+            <!--contribute section ends-->
+
+            <!--sponsor section-->
+            <section class="Codefii-sponsor Codefii-app__sponsor">
+              <h3 class="Codefii-sponsor__title">Our Sponsors</h3>
+               <a href="https://www.nodesagency.com" target="_blank" class="Codefii-sponsor__link">
+                 <article class="Codefii-card Codefii-sponsor__sponsor dark">
+                   <img src="./images/codefii_image_9.png" class="Codefii-card__image">
+                   <p class="Codefii-card__blurb-text">Nodes</p>
+                   <!---->
+                 </article>
+               </a>
+               <a href="https://www.skelpo.com" target="_blank" class="Codefii-sponsor__link">
+                 <article class="Codefii-card Codefii-sponsor__sponsor dark">
+                   <img src="./images/codefii_image_10.png" class="Codefii-card__image">
+                   <p class="Codefii-card__blurb-text">Skelpo</p>
+                   <!---->
+                 </article>
+               </a>
+               <a href="mailto:sponsor@Codefii.com" target="_blank" class="Codefii-sponsor__link">
+                 <article class="Codefii-card Codefii-sponsor__sponsor dark empty">
+                   <img src="./images/codefii_image_11.png" class="Codefii-card__image">
+                   <p class="Codefii-card__blurb-text"></p>
+                   <!---->
+                 </article>
+               </a>
+               <a href="mailto:sponsor@Codefii.com" target="_blank" class="Codefii-sponsor__link">
+                 <article class="Codefii-card Codefii-sponsor__sponsor dark empty">
+                   <img src="./images/codefii_image_11.png" class="Codefii-card__image">
+                   <p class="Codefii-card__blurb-text"></p>
+                   <!---->
+                 </article>
+               </a>
+               <a href="mailto:sponsor@Codefii.com" target="_blank" class="Codefii-sponsor__link">
+                 <article class="Codefii-card Codefii-sponsor__sponsor dark empty">
+                   <img src="./images/codefii_image_11.png" class="Codefii-card__image">
+                   <p class="Codefii-card__blurb-text"></p>
+                   <!---->
+                 </article>
+               </a>
+             </section>
+             <!--sponsor section ends-->
+           </main>
+
+         <footer class="Codefii-footer Codefii-app__footer">
+           <div class="Codefii-footer__link-container">
+             <a href="mailto:hello@Codefii.com" class="Codefii-footer__link">Contact Us</a>
+             <a target="_blank" href="https://twitter.com/Codefii" class="Codefii-footer__link">Twitter</a>
+             <a target="_blank" href="https://medium.com/@Codefii" class="Codefii-footer__link">Medium</a>
+             <a href="/Codefii-presskit-2018-05-04.zip" class="Codefii-footer__link">Press Kit</a>
+             <a href="mailto:jobs@Codefii.com" class="Codefii-footer__link">Jobs</a>
+           </div>
+           <small class="Codefii-footer__copyright">© Codefii, 2018</small>
+         </footer>
+       </div>
 
 
 
-        <div class="codefii_info">
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column is-4 has-text-centered">
-                        <img src="./images/performance.png" class="stable-img">
-                        <h3 class="title is-3">Performance</h3>
-                        <p>Non-blocking, event-driven architecture built on top of Apple's SwiftNIO delivers high performance.
-</p>
-                    </div>
-                    <div class="column is-4 has-text-centered">
-                        <img src="./images/phplogo.svg" class="stable-img">
-                        <h3 class="title is-3">Popularity</h3>
-                        <p>Written in PHP, the world most popular and widely used server side scripting language
-                        </p>
-                    </div>
-                    <div class="column is-4 has-text-centered">
-                        <img src="./images/admin.svg" class="stable-img">
-                        <h3 class="title is-3">Syrah Admin</h3>
-                        <p>Syrah is a collection of packages which allows you to manage models quickly. 
-                            It provides a set of
-                        useful packages  that will make the process of creating a highly customizable admin panel
-                        easier
-                        </p>
-                    </div>
-                </div>
-                <!-- packages -->
-                <div class="columns is-centered">
-                    <div class="column is-3 has-text-centered">
-                        <h3 class="title is-3">Packages</h3>
-                    </div>
-                </div>
-                <div class="columns is-centered">
-                      
-                    <div class="column is-3 has-text-centered">
-                        
-                        <li class="package-list">
-                            <h3 class="title is-4">Http Middleware</h3>
-                        </li>
-                        <li class="package-list">
-                            <h3 class="title is-4">Syrah Admin</h3>
-                        </li>
-                    </div>
-                        <div class="column is-3 has-text-centered">
-                        <li class="package-list">
-                            <h3 class="title is-4">Silp</h3>
-                        </li>
-                        <li class="package-list">
-                            <h3 class="title is-4">Auth</h3>
-                        </li>
-                    </div>
-                    <div class="column is-3 has-text-centered">
-                        <li class="package-list">
-                            <h3 class="title is-4">Mysql</h3>
-                        </li>
-                        <li class="package-list">
-                            <h3 class="title is-4">PostgreSql</h3>
-                        </li>
-                    </div>
-                   
-                </div>
-                
-                    
-                <!-- end packages -->
-            </div>
-        </div>
-
-
-<!-- contaibute-->
-
-<div class="contribution">
-    <div class="container">
-        <div class="columns is-centered">
-            <div class="column is-2 has-text-centered">
-                <h3 class='title is-3'>Contribute</h3>
-            </div>
-        </div>
-
-        <!-- contribution-->
-            <div class="columns is-centered">
-                <div class="column is-3 has-text-centered">
-                    <img src="./images/github.png" class="stable-img">
-                    <p>
-                        Submit feature ideas, report bugs, and merge code on GitHub!
-                    </p>
-                   <p>
-                        <a href="https://github.com/codefii/codefii" class="button is-primary is-rounded">GITHUB</a>
-                   </p>
-                </div>
-                <div class="column is-4 has-text-centered">
-                    <img src="./images/twitter.png" class="stable-img">
-                    <p>
-                        Connect with other 
-                    </p>
-                    <p>
-                        <a href="https://github.com/codefii/codefii" class="button is-primary is-rounded">GITHUB</a>
-                    </p>
-                </div>
-            </div>
-        <!-- end contribution-->
-    </div>
-</div>
-        <!-- end center-->
-
-
-
-        <!-- footer -->
-
-    <footer class="footer">
-        <div class="container">
-            <!-- <div class="columns">
-              
-                <div class="column is-3">
-                    
-    
-                </div>
-              
-              
-    
-            </div>
-        </div> -->
-       
-        <div class="container">
-            <div class="content">
-                <div class="columns is-centered">
-                    <div class="column is-6 has-text-centered">
-                        <h6 class="title is-7">© 2018 Bittrill</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-        <!-- end footer-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-        <script src="css/prism.js"></script>
-        <script>
-            $(document).ready(() => {
-                $('.burger').on('click', function () {
-                    $('.left-bar').toggleClass('side')
-                    $(".navbar-burger").toggleClass(".btn-2")
-                });
-                $(".btn-2").click(function () {
-
-                });
-
-            })
-        </script>
-    </body>
-
-</html>
+</body>

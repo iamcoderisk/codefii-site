@@ -1,0 +1,512 @@
+<style type="text/css">
+.Codefii-app{
+font-family:Roboto,sans-serif;
+background-color:#fff
+}
+.Codefii-app .Codefii-app__nav{
+margin:.5em 10%
+}
+.Codefii-app .Codefii-app__content{
+display:flex;
+width:100%;
+flex-direction:column;
+align-items:center
+}
+.Codefii-app .Codefii-app__content>*{
+margin-top:2em
+}
+.Codefii-app .Codefii-app__content>:not(:first-child){
+width:100%;
+padding-left:15%;
+padding-right:15%
+}
+.Codefii-app .Codefii-app__content .Codefii-app__call-to-action,.Codefii-app .Codefii-app__content .Codefii-app__packages{
+margin-top:0;
+}
+.Codefii-app .Codefii-app__content .Codefii-app__call-to-action{
+background-color:#000;
+width:100%;
+padding:4em 0 3em
+}
+@media (max-width:420px){
+.Codefii-app .Codefii-app__nav{
+margin-left:2.5%;
+margin-right:2.5%
+}
+.Codefii-app .Codefii-app__content>:not(:first-child),.Codefii-app .Codefii-app__header{
+padding-left:2.5%;
+padding-right:2.5%
+}
+.Codefii-app .Codefii-app__content>*{
+margin-top:1em
+}
+}
+@media (max-width:768px){
+.Codefii-app .Codefii-app__bio{
+padding-left:5%!important;
+padding-right:5%!important
+}
+}
+@media (max-width:1050px){
+.Codefii-app .Codefii-app__contribute{
+padding-left:5%!important;
+padding-right:5%!important
+}
+.Codefii-app .Codefii-app__sponsor{
+padding-left:10%!important;
+padding-right:10%!important
+}
+}
+
+.Codefii-nav{
+display:flex;
+align-items:center;
+}
+.Codefii-nav:before{
+content:"";
+height:5em;
+width:15em;
+background-image:url(./images/codefii.png);
+background-size:75px;
+background-position:0;
+background-repeat:no-repeat;
+}
+.Codefii-nav .Codefii-nav__list,.Codefii-nav .Codefii-nav__list-item,.Codefii-nav:before{
+display:inline-block
+}
+.Codefii-nav .Codefii-nav__list{
+width:100%;
+text-align:right
+}
+.Codefii-nav .Codefii-nav__list-item{
+text-transform:uppercase;
+font-weight:700
+}
+.Codefii-nav .Codefii-nav__link{
+color:#000;
+margin:0 .5em;
+font-size:large;
+text-decoration:none
+}
+.Codefii-nav .Codefii-nav__link.active,.Codefii-nav .Codefii-nav__link:hover{
+color:#dc3545;
+}
+@media (max-width:600px){
+.Codefii-nav{
+flex-direction:column
+}
+.Codefii-nav .Codefii-nav__list{
+padding:0;
+text-align:center;
+}
+}
+@media (max-width:768px){
+.Codefii-nav{
+font-size:small;
+}
+}
+
+.Codefii-header{
+text-align:center;
+}
+@media (max-width:420px){
+.Codefii-header .Codefii-header__slogan{
+font-size:larger
+}
+}
+
+.Codefii-call-to-action{
+display:flex;
+justify-content:center;
+}
+
+.Codefii-call-to-action .Codefii-call-to-action__button{
+display:inline-block;
+color:#fff;
+background-color:#00b0ff;
+padding:0 1em;
+line-height:2.5em;
+text-align:center;
+text-decoration:none;
+text-transform:uppercase;
+border-radius:2px;
+box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+user-select:none;
+transition:background-color 1ms cubic-bezier(.25,.8,.5,1);
+font-size:larger;
+width:10em
+}
+.Codefii-call-to-action .Codefii-call-to-action__button:hover{
+background-color:#1ab8ff
+}
+.Codefii-call-to-action .Codefii-call-to-action__button+.Codefii-call-to-action__button{
+margin-left:1.5em
+}
+@media (max-width:420px){
+.Codefii-call-to-action .Codefii-call-to-action__button{
+font-size:small
+}
+}
+
+.Codefii-terminal{
+background:#000;
+width:45em;
+max-width:85%;
+padding:1em;
+border-radius:1em
+}
+.Codefii-terminal .Codefii-terminal__stoplight-container .Codefii-terminal__stoplight{
+display:inline-block;
+width:1.5em;
+height:1.5em;
+border-radius:1em;
+}
+.Codefii-terminal .Codefii-terminal__stoplight-container .Codefii-terminal__stoplight.red{
+background:#fe625d;
+}
+.Codefii-terminal .Codefii-terminal__stoplight-container .Codefii-terminal__stoplight.yellow{
+background:#ffc146;
+}
+.Codefii-terminal .Codefii-terminal__stoplight-container .Codefii-terminal__stoplight.green{
+background:#2fc950;
+}
+.Codefii-terminal .Codefii-terminal__stoplight-container .Codefii-terminal__stoplight+.Codefii-terminal__stoplight{
+margin-left:.75em;
+}
+.Codefii-terminal .Codefii-terminal__sample-code{
+color:#fff;
+font-size:large;
+font-weight:500;
+font-family:Roboto Mono,monospace;
+padding:0 .75em;
+}
+.Codefii-terminal .Codefii-terminal__sample-code .keyword{
+color:#ea80fc;
+}
+.Codefii-terminal .Codefii-terminal__sample-code .method,.Codefii-terminal .Codefii-terminal__sample-code .type{
+color:#80d8ff;
+}
+.Codefii-terminal .Codefii-terminal__sample-code .string{
+color:#ff80ab;
+}
+@media (max-width:420px){
+.Codefii-terminal{
+max-width:90%;
+}
+.Codefii-terminal .Codefii-terminal__stoplight{
+width:1em!important;
+height:1em!important;
+}
+.Codefii-terminal .Codefii-terminal__stoplight+.Codefii-terminal__stoplight{
+margin-left:.5em!important;
+}
+.Codefii-terminal .Codefii-terminal__sample-code{
+font-size:x-small!important;
+padding:0;
+}
+}
+@media (max-width:600px){
+.Codefii-terminal .Codefii-terminal__sample-code{
+font-size:small;
+}
+}
+@media (max-width:768px){
+.Codefii-terminal .Codefii-terminal__stoplight{
+width:1.25em!important;
+height:1.25em!important;
+}
+.Codefii-terminal .Codefii-terminal__stoplight+.Codefii-terminal__stoplight{
+margin-left:.6em!important;
+}
+.Codefii-terminal .Codefii-terminal__sample-code{
+margin:0;
+}
+}
+
+.Codefii-bio{
+display:flex;
+font-size:large;
+padding-top:2em;
+background-color:#000;
+}
+.Codefii-bio .Codefii-bio__blurb{
+display:inline-block;
+width:33%;
+}
+.Codefii-bio .Codefii-bio__blurb+.Codefii-bio__blurb{
+margin-left:2em;
+}
+@media (max-width:420px){
+.Codefii-bio{
+flex-direction:column
+}
+.Codefii-bio .Codefii-bio__blurb{
+width:100%;
+padding:.5em;
+}
+.Codefii-bio .Codefii-bio__blurb+.Codefii-bio__blurb{
+margin-left:0!important;
+}
+}
+@media (max-width:768px){
+.Codefii-bio{
+font-size:medium
+}
+.Codefii-bio .Codefii-bio__blurb+.Codefii-bio__blurb{
+margin-left:0;
+}
+}
+@media (max-width:1050px){
+.Codefii-bio .Codefii-bio__blurb{
+width:100%;
+padding:.5em
+}
+.Codefii-bio .Codefii-bio__blurb+.Codefii-bio__blurb{
+margin-left:1em
+}
+}
+
+.Codefii-card{
+display:inline-flex;
+font-weight:500;
+padding:1em;
+flex-direction:column;
+justify-items:center;
+text-align:center;
+}
+.Codefii-card.dark{
+color:#000;
+}
+.Codefii-card.dark .Codefii-card__blurb-text a{
+color:inherit;
+border-bottom:1px dotted #000;
+}
+.Codefii-card.light{
+color:#fff;
+}
+.Codefii-card.light .Codefii-card__blurb-text a{
+color:inherit;
+border-bottom:1px dotted hsla(0,0%,100%,.5)
+}
+.Codefii-card.light .Codefii-card__blurb-text a:hover{
+border-bottom-color:hsla(0,0%,100%,.75)
+}
+.Codefii-card .Codefii-card__image{
+display:block;
+height:3.5em;
+width:3.5em;
+margin:0 auto;
+padding:0;
+border-style:none;
+user-select:none;
+}
+.Codefii-card .Codefii-card__blurb-text a{
+text-decoration:none
+}
+.Codefii-card .Codefii-card__button{
+display:inline-block;
+color:#fff;
+background-color:#00b0ff;
+padding:0 1em;
+line-height:2.5em;
+text-align:center;
+text-decoration:none;
+text-transform:uppercase;
+border-radius:2px;
+box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+user-select:none;
+transition:background-color 1ms cubic-bezier(.25,.8,.5,1);
+align-self:center;
+}
+.Codefii-card .Codefii-card__button:hover{
+background-color:#1ab8ff;
+}
+
+.Codefii-packages{
+font-weight:700;
+color:#fff;
+background-color:#000;
+text-align:center;
+}
+.Codefii-packages .Codefii-packages__title{
+font-size:2.25em
+}
+.Codefii-packages .Codefii-packages__container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around
+}
+.Codefii-packages .Codefii-packages__column-container{
+width:33%;
+}
+.Codefii-packages .Codefii-packages__repo-link{
+display:inline-flex;
+font-size:larger;
+color:inherit;
+width:9em;
+margin-top:2em;
+line-height:1.75em;
+text-decoration:none
+}
+.Codefii-packages .Codefii-packages__repo-link:before{
+content:url(./images/codefii_image_5.svg);
+margin-right:1em;
+height:1em;
+user-select:none;
+}
+@media (max-width:420px){
+.Codefii-packages .Codefii-packages__title{
+font-size:x-large
+}
+.Codefii-packages .Codefii-packages__repo-link{
+font-size:medium;
+line-height:2em;
+}
+.Codefii-packages .Codefii-packages__repo-link:before{
+margin-right:.5em
+}
+}
+@media (max-width:768px){
+.Codefii-packages .Codefii-packages__column-container{
+width:40%;
+}
+}
+
+.Codefii-contribute{
+text-align:center;
+}
+.Codefii-contribute .Codefii-contribute__title{
+font-size:2.25em
+}
+.Codefii-contribute .Codefii-contribute__opportunity-container{
+display:flex
+}
+.Codefii-contribute .Codefii-contribute__opportunity{
+font-size:large;
+width:33%
+}
+.Codefii-contribute .Codefii-contribute__opportunity .Codefii-card__blurb-text{
+flex:1 auto
+}
+.Codefii-contribute .Codefii-contribute__opportunity+.Codefii-contribute__opportunity{
+margin-left:1.75em
+}
+@media (max-width:420px){
+.Codefii-contribute .Codefii-contribute__title{
+font-size:x-large;margin:.25em 0 .5em;
+}
+.Codefii-contribute .Codefii-contribute__opportunity-container{
+flex-direction:column
+}
+.Codefii-contribute .Codefii-contribute__opportunity{
+font-size:large;
+width:unset
+}
+}
+@media (max-width:768px){
+.Codefii-contribute .Codefii-contribute__opportunity .Codefii-card__image{
+height:3em;
+width:3em
+}
+.Codefii-contribute .Codefii-contribute__opportunity .Codefii-card__blurb-text{
+font-size:medium;
+}
+.Codefii-contribute .Codefii-contribute__opportunity .Codefii-card__button{
+font-size:small!important;
+}
+.Codefii-contribute .Codefii-contribute__opportunity+.Codefii-contribute__opportunity{
+margin-left:0!important
+}
+}@media (max-width:1050px){
+.Codefii-contribute .Codefii-contribute__opportunity .Codefii-card__button{
+font-size:medium
+}
+.Codefii-contribute .Codefii-contribute__opportunity+.Codefii-contribute__opportunity{
+margin-left:.5em
+}
+}
+
+.Codefii-sponsor{
+text-align:center
+}
+.Codefii-sponsor .Codefii-sponsor__title{
+font-size:2.25em;
+}
+.Codefii-sponsor .Codefii-sponsor__link{
+font-size:large;
+text-decoration:none;
+}
+.Codefii-sponsor .Codefii-sponsor__sponsor{
+width:20%;
+}
+.Codefii-sponsor .Codefii-sponsor__sponsor .Codefii-card__image{
+height:6.25em;
+width:6.25em
+}
+@media (max-width:420px){
+.Codefii-sponsor .Codefii-sponsor__title{
+font-size:x-large;
+}
+
+.Codefii-sponsor .Codefii-sponsor__sponsor .Codefii-card__image{
+height:4em;
+width:4em
+}
+}
+@media (max-width:768px){
+.Codefii-sponsor .Codefii-sponsor__sponsor{
+width:50%!important;
+padding-bottom:.5em
+}
+.Codefii-sponsor .Codefii-sponsor__sponsor .Codefii-card__image{
+height:5em;
+width:5em
+}
+}
+@media (max-width:1050px){
+.Codefii-sponsor .Codefii-sponsor__sponsor{
+width:33%
+}
+.Codefii-sponsor .Codefii-sponsor__sponsor .Codefii-card__blurb-text{
+margin-bottom:0;
+}
+}
+
+.Codefii-footer{
+color:#9b9b9b;
+background-color:#000;
+width:100%;
+padding:2em 0;
+text-align:center;
+}
+.Codefii-footer .Codefii-footer__link{
+color:inherit;
+font-size:larger;
+text-decoration:none;
+}
+.Codefii-footer .Codefii-footer__link:hover{
+color:#fff;
+}
+.Codefii-footer .Codefii-footer__link+.Codefii-footer__link:before{
+color:#9b9b9b!important;
+content:"\2022";
+margin:0 .4em;
+}
+.Codefii-footer .Codefii-footer__copyright{
+display:block;
+color:#4a4a4a;
+margin-top:1em;
+}
+@media (max-width:420px){
+.Codefii-footer .Codefii-footer__link{
+display:block;
+}
+.Codefii-footer .Codefii-footer__link+.Codefii-footer__link{
+margin-top:.25em;
+}
+.Codefii-footer .Codefii-footer__link+.Codefii-footer__link:before{
+content:"";
+margin:0;
+}
+}
+</style>
